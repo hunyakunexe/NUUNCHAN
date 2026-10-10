@@ -1,0 +1,16 @@
+# ぬーんちゃんBot 必要パッケージ  (Python 3.10以上)
+# インストール: pip install -r requirements.txt
+
+# PyTorchはCPU版を使う(通常版はCUDA関連で数GBになり、容量・メモリ不足で失敗しやすい)
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+discord.py>=2.3
+numpy>=1.24
+
+# CPU版torchを先に確定させてから、埋め込みモデル(cl-nagoya/ruri-v3-130m。アカウント・APIキー不要)を入れる
+torch
+transformers>=4.48.0
+sentence-transformers>=3.0
+
+# 単語の切れ目の判定用(辞書内蔵・アカウント不要。無くても動く)
+janome>=0.5.0
